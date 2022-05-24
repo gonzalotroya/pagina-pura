@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  background-color: #000;
+}
+#rutina{
+  color: rgb(0, 255, 106);
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px gold;
+}
+p{
+    margin: 12px;
+    color: #000;
+}
+p::after { 
+  white-space:after;
+  content: "\A		";
+  font-weight: bold;
+}
+div::first-letter {
+    white-space:pre;
+    content: "\A			";
+    font-weight: bold;
+    font-style: italic;
+    font-style: oblique;
+    font-size: 25px;
+    }
+
+    div:nth-of-type(2n) {
+      background-image: url("blanco.jpg");
+
+    }
+    div:nth-of-type(2n+1) {
+      background-image: url("gris.jpg");
+    }
+div{
+    margin: 36px;
+}
+#adv:target{
+  border: 2px solid black;
+  display: block;
+}  
+a{
+    margin-left: 50%;
+    font-size: 20px;   
+}
+#espartana{
+  margin-left: 1%;
+}
+a:hover{
+  background-color: #ffee00;
+  font-size: 30px;   
+
+}
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* The modal's background */
+.modal {
+  display: none;
+  position: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgb(3, 3, 3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Display the modal when targeted */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* La tabla y como se visualiza el modal */
+.modal-dialogo {
+  display: -moz-marker;
+  vertical-align: middle;
+}
+
+/* Contenido del modal */
+.modal-dialogo .contenidoModal {
+  margin: auto;
+  background-color: #ffee00;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px rgb(119, 119, 119) solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Pone la animacion*/
+  -webkit-animation-name: animacion; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.8s; /* Chrome, Safari, Opera */
+  animation-name: animacion;
+  animation-duration: 0.8s;
+}
+/*Boton de cerrar*/
+.cerrar {
+  text-decoration: italic;
+  float: right;
+  font-size: 35px;
+  font-weight: normal;
+  color: rgb(55, 12, 245);
+}
+/*Boton de cerrar estilos*/
+.cerrar:hover,.cerrar:focus {
+  color: #000;
+  text-decoration: navy;
+  cursor: crosshair;
+}
+/*Contenedor donde se le da formato y color*/
+.Contenedor {
+  padding: 2px 16px;
+  background-color: rgb(142, 192, 151);
+}
+/*Cabezera de la tabla*/
+header {
+  font-size: 20px;
+  color: rgb(77, 18, 216);
+}
+/*Pie de la tabla*/
+footer {
+  font-size: 16px;
+  color: rgb(62, 37, 207);
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+#pos{
+  margin-left: 5%;
+}
+
+/* DEFINO LAS ANIMACIONES */
+#movida {
+            animation-duration: 6s;
+            animation-name: animat;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animat {
+            from {
+                margin-left: 80%;
+                width: 300%;
+                color:rgb(60, 255, 0);
+            }
+            50% {
+                font-size: 200%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+                color:rgb(208, 255, 0);
+            }
+        }
+</style>
+</head>
+<body>
+<h1 id="rutina">Rutina estandar</h1>
+<article id="pos">
+  <article class="flip-box">
+    <article class="flip-box-inner">
+      <article class="flip-box-front">
+        <img src="zyzz.jpg" alt="zyzz" style="width:300px;height:200px">
+      </article>
+      <div class="flip-box-back">
+        <h2>Zyzz</h2>
+        <p>Un joven ya fallecido que sirvio de ejemplo para muchos</p>
+      </div>
+    </article>
+  </article>
+</article>
+<div><a href="#adv">Advertencia</a>
+</div>
+
+<div>  
+    <p>Martes espalda y abdominales</p>
+    <p>1.-Jalón con barra alargado</p>
+    <p>2.- Remo en polea</p>
+    <p>3.- Jalón estrecho con agarre de V</p>
+    <p>4.-Dominadas</p>
+    <p>5.- Lumbares</p>
+    <p2>6.- Plancha libre</p2>
+
+</div>
+<div>
+    <p>Jueves pecho y brazos</p>
+    <p>1.-Press de banca</p>
+    <p>2.-Apertura con anillas</p>
+    <p>3.-Press de banca inclinado</p>
+    <p>4.-Fondo libre</p>
+    <p>5.-Curl de biceps</p>
+    <p2>6.-Extensión de triceps con cuerda</p2>
+</div>    
+<div>
+    <p>Sabado piernas y hombros</p>
+    <p>1.-Sentadillas</p>
+    <p>2.-Peso muerto</p>
+    <p>3.-Extension de cuádriceps</p>
+    <p>4.-Gemélos</p>
+    <p>5.-Apertura de hombros</p>
+    <p2>6.-Press militar</p2>
+</div>
+
+
+<div>
+    <p>Advertencia: Seguir siempre los avisos de tu cuerpo y seguir siempre la técnica para evitar lesiones</p>
+</div>
+
+<div id="adv">
+  <p>Con esta advertencia dada buen entreno y animo todos lo vamos a conseguir.</p>
+  <p>Te dejo un pequeño reto espartano en el link de abajo</p>
+<a id="espartana" href="#idmodal">Rutina espartana</a>
+</div>
+
+<article id="caja">
+  <p id="parrafo"></p>
+
+  <article id="movida">Alcanza la cima
+  </article>
+
+</article>
+<textarea id="mensaje" rows="4" cols="30">Escribe tu mensaje motivador aqui</textarea>
+<button onclick="actualizar()">ACEPTAR</button>
+
+<script>
+function actualizar(){
+  document.getElementById("movida").innerHTML=document.getElementById("mensaje").value;
+}
+</script>
+<div id="idmodal" class="modal">
+  <div class="modal-dialogo">
+    <div class="contenidoModal">
+      <header class="Contenedor">
+        <a href="#" class="cerrar">cerrar</a>
+        <h2>Reto espartano
+        </h2>
+      </header>
+      <div class="Contenedor">
+        <p>300 flexiones</p>
+        <p>300 sentadillas</p>
+        <p>300 abdominales</p>
+        <p>Correr 10 km</p>
+      </div>
+      <footer class="Contenedor">
+        <p>Gonzalo de Troya Hernando
+        </p>
+      </footer>
+    </div>
+  </div>
+</div>
+<p3>
+<br>
+</p3>
+</body>
+</html>
